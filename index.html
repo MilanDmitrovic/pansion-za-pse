@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pansion za pse Žuža 🐾 Krnjača, Beograd</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#16324F;
+  --navy-2:#24486B;
+  --sky:#4FB3E8;
+  --sky-l:#DCF0FB;
+  --coral:#FF7A59;
+  --coral-l:#FFE6DF;
+  --sun:#FFC94D;
+  --sun-l:#FFF3D6;
+  --mint:#3FCFA0;
+  --mint-l:#DDF7EE;
+  --bg:#FFFDF8;
+  --card:#FFFFFF;
+  --mute:#5F7387;
+  --line:rgba(22,50,79,.10);
+  --sh:0 4px 0 rgba(22,50,79,.08),0 12px 30px rgba(22,50,79,.09);
+  --sh-h:0 6px 0 rgba(22,50,79,.10),0 22px 46px rgba(22,50,79,.16);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:86px;overflow-x:hidden;max-width:100%}
+body{font-family:Nunito,system-ui,sans-serif;background:var(--bg);color:var(--navy);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1200px,92vw);margin-inline:auto}
+h1,h2,h3,h4{font-family:"Baloo 2",cursive;font-weight:700;line-height:1.15;letter-spacing:-.01em}
+
+/* header */
+header{position:sticky;top:0;z-index:70;padding:12px 0;background:rgba(255,253,248,.86);backdrop-filter:blur(12px)}
+.nav{display:flex;align-items:center;gap:16px;background:var(--card);border-radius:99px;padding:9px 9px 9px 20px;box-shadow:var(--sh)}
+.logo{display:flex;align-items:center;gap:10px;font-family:"Baloo 2",cursive;font-weight:800;font-size:1.2rem}
+.logo .paw{width:38px;height:38px;border-radius:14px;background:var(--sun);display:grid;place-items:center;color:var(--navy);transform:rotate(-8deg);flex:none}
+nav.links{margin-left:auto;display:flex;gap:2px}
+nav.links a{padding:9px 15px;border-radius:99px;font-weight:600;font-size:.92rem;color:var(--mute);transition:.2s}
+nav.links a:hover{background:var(--sky-l);color:var(--navy)}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;cursor:pointer;font:inherit;
+  font-family:"Baloo 2",cursive;font-weight:700;font-size:1rem;padding:13px 26px;border-radius:99px;
+  transition:transform .18s cubic-bezier(.34,1.56,.64,1),box-shadow .2s,background .2s
+}
+.btn-c{background:var(--coral);color:#fff;box-shadow:0 4px 0 #E05B3C,0 10px 24px rgba(255,122,89,.34)}
+.btn-c:hover{transform:translateY(-3px);box-shadow:0 7px 0 #E05B3C,0 16px 32px rgba(255,122,89,.4)}
+.btn-c:active{transform:translateY(1px);box-shadow:0 2px 0 #E05B3C}
+.btn-w{background:#fff;color:var(--navy);box-shadow:0 4px 0 rgba(22,50,79,.12)}
+.btn-w:hover{transform:translateY(-3px);box-shadow:0 7px 0 rgba(22,50,79,.14)}
+.btn-n{background:var(--navy);color:#fff;box-shadow:0 4px 0 #0C2137}
+.btn-n:hover{transform:translateY(-3px);box-shadow:0 7px 0 #0C2137}
+.burger{display:none;margin-left:auto;background:var(--sky-l);border:0;border-radius:99px;padding:11px;cursor:pointer}
+
+/* hero */
+.hero{position:relative;padding:52px 0 40px}
+.blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.5;pointer-events:none;z-index:0}
+.blob.b1{width:460px;height:460px;background:var(--sky);top:-120px;right:-90px}
+.blob.b2{width:380px;height:380px;background:var(--sun);bottom:-140px;left:-110px;opacity:.42}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
+.chip{display:inline-flex;align-items:center;gap:8px;background:var(--mint-l);color:#1E7A5C;font-weight:700;font-size:.85rem;padding:8px 16px;border-radius:99px;margin-bottom:20px}
+.chip .d{width:8px;height:8px;border-radius:99px;background:var(--mint);animation:bl 1.8s infinite}
+@keyframes bl{0%,100%{opacity:1}50%{opacity:.35}}
+.hero h1{font-size:clamp(2.6rem,5.6vw,4.3rem);margin-bottom:18px}
+.hero h1 span{color:var(--coral);position:relative;display:inline-block}
+.hero h1 span::after{
+  content:"";position:absolute;left:-2%;right:-2%;bottom:2px;height:10px;border-radius:99px;
+  background:var(--sun);z-index:-1
+}
+.hero p.lead{font-size:1.12rem;color:var(--mute);max-width:50ch;margin-bottom:28px}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:30px}
+.mini{display:flex;gap:12px;flex-wrap:wrap}
+.mini div{background:#fff;border-radius:18px;padding:12px 17px;box-shadow:var(--sh);display:flex;align-items:center;gap:11px}
+.mini b{font-family:"Baloo 2",cursive;font-size:1.25rem;line-height:1;display:block}
+.mini small{font-size:.76rem;color:var(--mute);display:block;line-height:1.3}
+.mi{width:34px;height:34px;border-radius:11px;display:grid;place-items:center;flex:none}
+
+.hero-art{position:relative}
+.hero-art .frame{
+  border-radius:44px;overflow:hidden;box-shadow:var(--sh-h);border:8px solid #fff;
+  aspect-ratio:1/1;background:var(--sky-l);transform:rotate(2deg)
+}
+.hero-art .frame img{width:100%;height:100%;object-fit:cover}
+.pop{position:absolute;background:#fff;border-radius:22px;padding:12px 17px;box-shadow:var(--sh-h);display:flex;align-items:center;gap:11px;font-weight:700;font-size:.9rem}
+.pop.p1{top:14px;left:-24px;transform:rotate(-5deg);animation:fl 5s ease-in-out infinite}
+.pop.p2{bottom:36px;right:-20px;transform:rotate(4deg);animation:fl 5s ease-in-out infinite .8s}
+@keyframes fl{0%,100%{translate:0 0}50%{translate:0 -10px}}
+.pop .em{width:36px;height:36px;border-radius:12px;display:grid;place-items:center;font-size:1.1rem}
+
+/* strip */
+.strip{background:var(--navy);color:#fff;padding:20px 0;overflow:hidden}
+.strip-in{display:flex;gap:40px;white-space:nowrap;width:max-content;animation:sl 24s linear infinite}
+.strip span{display:flex;gap:40px;align-items:center;font-family:"Baloo 2",cursive;font-weight:600;font-size:1rem}
+.strip em{font-style:normal;color:var(--sun)}
+@keyframes sl{to{transform:translateX(-50%)}}
+
+section{padding:88px 0;position:relative}
+.sh{text-align:center;max-width:640px;margin:0 auto 48px}
+.sh .kick{display:inline-block;background:var(--coral-l);color:var(--coral);font-weight:800;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;padding:6px 15px;border-radius:99px;margin-bottom:14px}
+.sh h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:12px}
+.sh p{color:var(--mute);font-size:1.05rem}
+
+/* about */
+.about{background:var(--sky-l);border-radius:52px;margin:0 4vw;padding:80px 0}
+.ab-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.ab-imgs{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.ab-imgs .fr{border-radius:30px;overflow:hidden;border:6px solid #fff;box-shadow:var(--sh);aspect-ratio:3/4;background:#fff}
+.ab-imgs .fr img{width:100%;height:100%;object-fit:cover}
+.ab-imgs .fr:nth-child(2){margin-top:34px}
+.name-tag{background:#fff;border-radius:20px;padding:14px 18px;box-shadow:var(--sh);margin-top:18px;display:flex;gap:14px;align-items:center;font-size:.92rem}
+.ab-grid h2{font-size:clamp(1.9rem,3.6vw,2.7rem);margin-bottom:14px}
+.ab-grid p{color:var(--mute);margin-bottom:14px}
+.ticks{list-style:none;display:grid;gap:12px;margin-top:20px}
+.ticks li{display:flex;gap:12px;align-items:flex-start;font-weight:600}
+.tk{width:26px;height:26px;border-radius:10px;background:var(--mint);color:#fff;display:grid;place-items:center;flex:none;margin-top:3px}
+
+/* services */
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.sc{
+  background:#fff;border-radius:30px;padding:30px;box-shadow:var(--sh);position:relative;overflow:hidden;
+  transition:transform .25s cubic-bezier(.34,1.56,.64,1),box-shadow .25s
+}
+.sc:hover{transform:translateY(-7px) rotate(-.6deg);box-shadow:var(--sh-h)}
+.sc::before{content:"";position:absolute;top:-40px;right:-40px;width:130px;height:130px;border-radius:50%;opacity:.16}
+.sc:nth-child(1)::before{background:var(--sky)}
+.sc:nth-child(2)::before{background:var(--coral)}
+.sc:nth-child(3)::before{background:var(--sun)}
+.sc:nth-child(4)::before{background:var(--mint)}
+.sc:nth-child(5)::before{background:var(--sky)}
+.sc:nth-child(6)::before{background:var(--coral)}
+.sc .ic{width:58px;height:58px;border-radius:19px;display:grid;place-items:center;margin-bottom:16px;position:relative}
+.sc:nth-child(1) .ic{background:var(--sky-l);color:#1D7FB4}
+.sc:nth-child(2) .ic{background:var(--coral-l);color:#D9522F}
+.sc:nth-child(3) .ic{background:var(--sun-l);color:#B07E0A}
+.sc:nth-child(4) .ic{background:var(--mint-l);color:#1E7A5C}
+.sc:nth-child(5) .ic{background:var(--sky-l);color:#1D7FB4}
+.sc:nth-child(6) .ic{background:var(--coral-l);color:#D9522F}
+.sc h3{font-size:1.25rem;margin-bottom:7px;position:relative}
+.sc p{color:var(--mute);font-size:.95rem;position:relative}
+
+/* dan u pansionu */
+.day{background:var(--navy);color:#fff;border-radius:52px;margin:0 4vw;padding:80px 0}
+.day .sh h2{color:#fff}.day .sh p{color:rgba(255,255,255,.66)}
+.day .sh .kick{background:rgba(255,201,77,.18);color:var(--sun)}
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;position:relative}
+.tl::before{content:"";position:absolute;top:26px;left:8%;right:8%;height:3px;background:rgba(255,255,255,.16);border-radius:9px}
+.tl-i{text-align:center;position:relative}
+.tl-i .dot{width:54px;height:54px;border-radius:99px;background:var(--sun);color:var(--navy);display:grid;place-items:center;margin:0 auto 16px;position:relative;z-index:1;box-shadow:0 0 0 8px var(--navy)}
+.tl-i:nth-child(2) .dot{background:var(--sky)}
+.tl-i:nth-child(3) .dot{background:var(--coral);color:#fff}
+.tl-i:nth-child(4) .dot{background:var(--mint)}
+.tl-i b{font-family:"Baloo 2",cursive;font-size:1.15rem;display:block;margin-bottom:4px}
+.tl-i .t{font-size:.78rem;color:var(--sun);font-weight:800;letter-spacing:.08em;margin-bottom:6px;display:block}
+.tl-i p{font-size:.9rem;color:rgba(255,255,255,.66)}
+
+/* gallery */
+.gg{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:180px;gap:16px}
+.gg .f{border-radius:26px;overflow:hidden;border:5px solid #fff;box-shadow:var(--sh);background:var(--sky-l)}
+.gg .f img{width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.34,1.4,.64,1)}
+.gg .f:hover img{transform:scale(1.07)}
+.s2{grid-column:span 2}.r2{grid-row:span 2}
+
+/* pricing */
+.pricing{background:var(--sun-l);border-radius:52px;margin:0 4vw;padding:80px 0}
+.pg{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
+.pk{background:#fff;border-radius:32px;padding:34px 30px;box-shadow:var(--sh);display:flex;flex-direction:column;transition:transform .25s cubic-bezier(.34,1.56,.64,1),box-shadow .25s}
+.pk:hover{transform:translateY(-7px);box-shadow:var(--sh-h)}
+.pk.top{background:var(--navy);color:#fff;transform:scale(1.03);box-shadow:var(--sh-h);position:relative}
+.pk.top:hover{transform:scale(1.03) translateY(-7px)}
+.ribbon{position:absolute;top:-14px;left:50%;translate:-50% 0;background:var(--sun);color:var(--navy);font-family:"Baloo 2",cursive;font-weight:800;font-size:.78rem;padding:6px 18px;border-radius:99px;box-shadow:0 4px 12px rgba(22,50,79,.2);white-space:nowrap}
+.pk .em{font-size:2rem;margin-bottom:8px;display:block}
+.pk h3{font-size:1.35rem;margin-bottom:2px}
+.pk .rng{font-size:.9rem;color:var(--mute);margin-bottom:18px}
+.pk.top .rng{color:rgba(255,255,255,.68)}
+.amt{font-family:"Baloo 2",cursive;font-size:3.1rem;line-height:1;color:var(--coral)}
+.pk.top .amt{color:var(--sun)}
+.amt sup{font-size:.95rem;font-family:Nunito,sans-serif;font-weight:700;vertical-align:super;margin-left:5px}
+.pk .pd{font-size:.85rem;color:var(--mute);margin:6px 0 20px}
+.pk.top .pd{color:rgba(255,255,255,.68)}
+.pk ul{list-style:none;display:grid;gap:11px;font-size:.94rem;margin-bottom:26px}
+.pk li{display:flex;gap:10px;align-items:flex-start}
+.pk li i{width:20px;height:20px;border-radius:7px;background:var(--mint-l);color:#1E7A5C;display:grid;place-items:center;flex:none;margin-top:4px;font-style:normal}
+.pk.top li i{background:rgba(255,201,77,.2);color:var(--sun)}
+.pk .btn{width:100%;margin-top:auto}
+
+/* faq */
+.faq-list{max-width:800px;margin:0 auto;display:grid;gap:14px}
+.fq{background:#fff;border-radius:22px;box-shadow:var(--sh);overflow:hidden}
+.fq summary{
+  list-style:none;cursor:pointer;padding:20px 24px;font-family:"Baloo 2",cursive;font-weight:700;font-size:1.08rem;
+  display:flex;justify-content:space-between;align-items:center;gap:16px
+}
+.fq summary::-webkit-details-marker{display:none}
+.fq summary::after{content:"+";font-size:1.6rem;color:var(--coral);transition:transform .25s;line-height:1}
+.fq[open] summary::after{transform:rotate(45deg)}
+.fq p{padding:0 24px 22px;color:var(--mute);font-size:.96rem}
+
+/* testimonials */
+.tst{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.tc{background:#fff;border-radius:28px;padding:28px;box-shadow:var(--sh);position:relative}
+.tc:nth-child(2){background:var(--mint-l)}
+.tc .st{color:var(--sun);letter-spacing:2px;margin-bottom:10px}
+.tc p{font-size:.98rem;margin-bottom:18px}
+.tw{display:flex;align-items:center;gap:12px}
+.tw .av{width:44px;height:44px;border-radius:99px;display:grid;place-items:center;font-family:"Baloo 2",cursive;font-weight:800;color:#fff;flex:none;background:var(--sky)}
+.tc:nth-child(2) .av{background:var(--coral)}
+.tc:nth-child(3) .av{background:var(--mint)}
+.tw b{display:block;font-size:.95rem}
+.tw span{font-size:.8rem;color:var(--mute)}
+
+/* cta + contact */
+.cta{background:linear-gradient(135deg,var(--coral),#FF9E6B);color:#fff;border-radius:52px;margin:0 4vw;padding:64px 40px;text-align:center;position:relative;overflow:hidden}
+.cta::before,.cta::after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.13)}
+.cta::before{width:280px;height:280px;top:-120px;left:-70px}
+.cta::after{width:220px;height:220px;bottom:-110px;right:-50px}
+.cta h2{font-size:clamp(1.9rem,4vw,2.9rem);margin-bottom:12px;position:relative}
+.cta p{max-width:52ch;margin:0 auto 26px;position:relative;color:rgba(255,255,255,.92)}
+.cta .btn{position:relative}
+
+.ct-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:start}
+.ct-cards{display:grid;gap:14px;margin-top:24px}
+.ct-cards a{display:flex;gap:15px;align-items:center;background:#fff;border-radius:22px;padding:17px 20px;box-shadow:var(--sh);transition:transform .2s cubic-bezier(.34,1.56,.64,1)}
+.ct-cards a:hover{transform:translateX(6px)}
+.ct-cards .ic{width:46px;height:46px;border-radius:15px;display:grid;place-items:center;flex:none}
+.ct-cards a:nth-child(1) .ic{background:var(--coral-l);color:#D9522F}
+.ct-cards a:nth-child(2) .ic{background:var(--sky-l);color:#1D7FB4}
+.ct-cards a:nth-child(3) .ic{background:var(--sun-l);color:#B07E0A}
+.ct-cards a:nth-child(4) .ic{background:var(--mint-l);color:#1E7A5C}
+.ct-cards b{display:block;font-size:1rem}
+.ct-cards span{font-size:.82rem;color:var(--mute)}
+form{background:#fff;border-radius:32px;padding:32px;box-shadow:var(--sh)}
+.rw{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:block;font-weight:700;font-size:.85rem;margin-bottom:6px}
+input,textarea{width:100%;padding:13px 16px;border:2px solid var(--line);border-radius:16px;font:inherit;font-size:.95rem;background:var(--bg);margin-bottom:14px;transition:.2s;color:var(--navy)}
+input:focus,textarea:focus{outline:0;border-color:var(--sky);background:#fff;box-shadow:0 0 0 4px var(--sky-l)}
+textarea{min-height:100px;resize:vertical}
+.mapb{margin-top:44px;border-radius:32px;overflow:hidden;border:6px solid #fff;box-shadow:var(--sh);height:330px}
+.mapb iframe{width:100%;height:100%;border:0;display:block}
+
+footer{background:var(--navy);color:rgba(255,255,255,.66);padding:56px 0 26px;margin-top:88px;border-radius:52px 52px 0 0}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px;padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,.14)}
+footer h4{color:#fff;font-family:"Baloo 2",cursive;font-size:1rem;margin-bottom:12px}
+footer ul{list-style:none;display:grid;gap:8px;font-size:.93rem}
+footer a:hover{color:var(--sun)}
+footer .logo{color:#fff;margin-bottom:12px}
+.fbot{padding-top:20px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:.85rem}
+
+.sticky{display:none}
+.rv{opacity:0;transform:translateY(24px);transition:.65s cubic-bezier(.2,.8,.3,1)}
+.rv.in{opacity:1;transform:none}
+
+@media(max-width:980px){
+  .hero-grid,.ab-grid,.ct-grid{grid-template-columns:1fr;gap:40px}
+  .svc,.pg,.tst{grid-template-columns:1fr}
+  .tl{grid-template-columns:1fr 1fr}.tl::before{display:none}
+  .gg{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px}
+  .fgrid{grid-template-columns:1fr 1fr}
+  nav.links{display:none;position:absolute;top:74px;left:4vw;right:4vw;flex-direction:column;background:#fff;border-radius:26px;padding:14px;box-shadow:var(--sh-h);gap:4px}
+  nav.links.open{display:flex}
+  .burger{display:block}.head-cta{display:none}
+  .pk.top{transform:none}.pk.top:hover{transform:translateY(-7px)}
+  .about,.day,.pricing,.cta{margin:0 2vw;border-radius:38px;padding-left:5vw;padding-right:5vw}
+  section{padding:64px 0}
+  .pop.p1{left:-8px}.pop.p2{right:-6px}
+  .sticky{display:flex;position:fixed;left:14px;right:14px;bottom:14px;z-index:80;gap:10px}
+  .sticky .btn{flex:1}
+  body{padding-bottom:76px}
+}
+@media(max-width:560px){.rw{grid-template-columns:1fr}.gg{grid-template-columns:1fr}.s2{grid-column:span 1}.tl{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#" class="logo">
+      <span class="paw"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><circle cx="6.5" cy="8" r="2.4"/><circle cx="11.6" cy="5.6" r="2.5"/><circle cx="17" cy="8.4" r="2.3"/><path d="M12 11.4c2.7 0 5.4 2.6 5.4 5.1 0 2-1.5 3.1-3.2 3.1-1 0-1.5-.4-2.2-.4s-1.2.4-2.2.4c-1.7 0-3.2-1.1-3.2-3.1 0-2.5 2.7-5.1 5.4-5.1z"/></svg></span>
+      Žuža
+    </a>
+    <button class="burger" id="burger" aria-label="Meni"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <nav class="links" id="links">
+      <a href="#o-nama">O nama</a>
+      <a href="#usluge">Usluge</a>
+      <a href="#dan">Dan kod nas</a>
+      <a href="#galerija">Galerija</a>
+      <a href="#cenovnik">Cenovnik</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a href="tel:0644114300" class="btn btn-c head-cta">064/4114-300</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="blob b1"></div><div class="blob b2"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="chip"><span class="d"></span> Ima slobodnih mesta za avgust i septembar</span>
+      <h1>Dok ste vi na putu,<br>on je na <span>letovanju</span>.</h1>
+      <p class="lead">Pansion za pse „Žuža" — 6 km od centra Beograda, okružen zelenilom i rekom. Veterinar tu 24 sata, ograđen teren 30×10 m i tri šetnje svakog dana.</p>
+      <div class="hero-btns">
+        <a href="#kontakt" class="btn btn-c">Rezerviši mesto
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#cenovnik" class="btn btn-w">Vidi cene</a>
+      </div>
+      <div class="mini">
+        <div><span class="mi" style="background:var(--coral-l);color:#D9522F"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 1.8"/></svg></span><span><b>24h</b><small>veterinar uz psa</small></span></div>
+        <div><span class="mi" style="background:var(--mint-l);color:#1E7A5C"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 19V6M20 19V6M4 12h16M2 19h20"/></svg></span><span><b>300 m²</b><small>za trčanje</small></span></div>
+        <div><span class="mi" style="background:var(--sun-l);color:#B07E0A"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M18 6l-2.5 2.5M8.5 15.5 6 18"/></svg></span><span><b>3×</b><small>šetnje dnevno</small></span></div>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="frame"><img src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=900&q=80" alt="Srećan pas"></div>
+      <div class="pop p1"><span class="em" style="background:var(--mint-l)">🦴</span> Tri obroka i tri šetnje</div>
+      <div class="pop p2"><span class="em" style="background:var(--sky-l)">🩺</span> Veterinar 0–24</div>
+    </div>
+  </div>
+</div>
+
+<div class="strip">
+  <div class="strip-in">
+    <span>Zelenilo i reka <em>🐾</em> Veterinarski nadzor 24h <em>🐾</em> Ograđen teren 30×10 m <em>🐾</em> Spoljni i unutrašnji boksevi <em>🐾</em> Kupanje i kozmetika <em>🐾</em></span>
+    <span>Zelenilo i reka <em>🐾</em> Veterinarski nadzor 24h <em>🐾</em> Ograđen teren 30×10 m <em>🐾</em> Spoljni i unutrašnji boksevi <em>🐾</em> Kupanje i kozmetika <em>🐾</em></span>
+  </div>
+</div>
+
+<!-- O NAMA -->
+<section id="o-nama">
+  <div class="about">
+    <div class="wrap ab-grid">
+      <div class="rv">
+        <div class="ab-imgs">
+          <div class="fr"><img src="https://images.unsplash.com/photo-1583512603805-3cc6b41f3edb?auto=format&fit=crop&w=600&q=80" alt="Žuža"></div>
+          <div class="fr"><img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=600&q=80" alt="Gilet"></div>
+        </div>
+        <div class="name-tag">🐕 <span><b>Žuža</b> i <b>Gilet</b> — naši kućni ljubimci po kojima pansion nosi ime. Oni dočekuju svakog novog gosta.</span></div>
+      </div>
+      <div class="rv">
+        <span class="chip" style="background:var(--sun-l);color:#B07E0A">O nama</span>
+        <h2>Vode ga veterinari. To se odmah vidi.</h2>
+        <p>Pansion je osnovao tim iskusnih veterinara, na čelu sa profesorom Veterinarskog fakulteta u penziji. Zato kod nas nadzor nije usluga koja se doplaćuje — nego podrazumeva.</p>
+        <p>Imanje je u Krnjači, na Pančevačkom putu, okruženo zelenilom i rekom. Dovoljno blizu grada da nas lako nađete, dovoljno daleko da pas ima mira.</p>
+        <ul class="ticks">
+          <li><span class="tk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5.5 5.5L20 7"/></svg></span> Spoljni i unutrašnji boksevi — biramo prema psu</li>
+          <li><span class="tk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5.5 5.5L20 7"/></svg></span> Terapija se daje tačno po rasporedu koji vi ostavite</li>
+          <li><span class="tk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5.5 5.5L20 7"/></svg></span> Javljamo se sa slikama dok ste na putu</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- USLUGE -->
+<section id="usluge">
+  <div class="wrap">
+    <div class="sh rv">
+      <span class="kick">Usluge</span>
+      <h2>Šta sve ulazi u boravak</h2>
+      <p>Bez sitnih slova i dodatnih stavki — sve navedeno je uključeno u dnevnu cenu.</p>
+    </div>
+    <div class="svc">
+      <div class="sc rv"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 15h6M12 12v6"/></svg></div><h3>Prijem sa papirima</h3><p>Vakcinacija, zdravstveni status i terapija — sve evidentiramo pri dolasku.</p></div>
+      <div class="sc rv"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4.5 8-10V5l-8-3-8 3v7c0 5.5 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Veterinar 24 sata</h3><p>Neko stručan je uvek tu. Intervencije po potrebi, odmah i na licu mesta.</p></div>
+      <div class="sc rv"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.8V20h14V9.8"/><path d="M9.5 20v-5h5v5"/></svg></div><h3>Boksevi po meri</h3><p>Spoljni za tople dane, unutrašnji za hladne. Čisti i redovno održavani.</p></div>
+      <div class="sc rv"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V6M20 19V6M4 12h16M2 19h20"/></svg></div><h3>Teren 30×10 metara</h3><p>Ograđena površina samo za trčanje i igru — bez povodca, pod nadzorom.</p></div>
+      <div class="sc rv"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 4v6.5a3.5 3.5 0 1 1-7 0V4"/><path d="M6 4h7M18 4v16"/><circle cx="18" cy="8" r="2.2"/></svg></div><h3>Tri šetnje dnevno</h3><p>Ujutru, popodne i uveče — pas zadržava ritam koji ima i kod kuće.</p></div>
+      <div class="sc rv"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3 4 5 6.5 5 9a5 5 0 0 1-10 0c0-2.5 2-5 5-9z"/></svg></div><h3>Kupanje i kozmetika</h3><p>Za boravak duži od 15 dana — gratis. Kući se vraća okupan i sređen.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- DAN -->
+<section id="dan">
+  <div class="day">
+    <div class="wrap">
+      <div class="sh rv">
+        <span class="kick">Raspored</span>
+        <h2>Jedan dan u pansionu</h2>
+        <p>Predvidiv ritam je ono što psa najbrže smiri u novoj sredini.</p>
+      </div>
+      <div class="tl rv">
+        <div class="tl-i"><div class="dot"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></div><span class="t">07:00</span><b>Jutarnja šetnja</b><p>Prva šetnja i doručak po režimu koji ste ostavili.</p></div>
+        <div class="tl-i"><div class="dot"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 19V6M20 19V6M4 12h16M2 19h20"/></svg></div><span class="t">11:00</span><b>Igra na terenu</b><p>Trčanje bez povodca na ograđenih 30×10 metara.</p></div>
+        <div class="tl-i"><div class="dot"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 22s8-4.5 8-10V5l-8-3-8 3v7c0 5.5 8 10 8 10z"/></svg></div><span class="t">16:00</span><b>Pregled i odmor</b><p>Veterinarska provera, terapija ako je ima, popodnevna šetnja.</p></div>
+        <div class="tl-i"><div class="dot"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5a6.7 6.7 0 0 0 11 11z"/></svg></div><span class="t">20:00</span><b>Večernja šetnja</b><p>Poslednja šetnja, večera i miran san u svom boksu.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIJA -->
+<section id="galerija">
+  <div class="wrap">
+    <div class="sh rv">
+      <span class="kick">Galerija</span>
+      <h2>Naši gosti u akciji</h2>
+      <p>Fotografije sa imanja, terena i iz svakodnevnih šetnji.</p>
+    </div>
+    <div class="gg rv">
+      <div class="f s2 r2"><img src="https://images.unsplash.com/photo-1507146426996-ef05306b995a?auto=format&fit=crop&w=900&q=80" alt=""></div>
+      <div class="f"><img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=600&q=80" alt=""></div>
+      <div class="f"><img src="https://images.unsplash.com/photo-1477884213360-7e9d7dcc1e48?auto=format&fit=crop&w=600&q=80" alt=""></div>
+      <div class="f s2"><img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?auto=format&fit=crop&w=900&q=80" alt=""></div>
+      <div class="f s2"><img src="https://images.unsplash.com/photo-1534361960057-19889db9621e?auto=format&fit=crop&w=900&q=80" alt=""></div>
+      <div class="f s2"><img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=900&q=80" alt=""></div>
+    </div>
+  </div>
+</section>
+
+<!-- CENOVNIK -->
+<section id="cenovnik">
+  <div class="pricing">
+    <div class="wrap">
+      <div class="sh rv">
+        <span class="kick">Cenovnik</span>
+        <h2>Što duže ostane, to je povoljnije</h2>
+        <p>Cene su po danu boravka. Sve usluge su uključene.</p>
+      </div>
+      <div class="pg">
+        <div class="pk rv">
+          <span class="em">🐕</span>
+          <h3>Kratak boravak</h3>
+          <div class="rng">1 – 5 dana</div>
+          <div class="amt">1.600<sup>RSD</sup></div>
+          <div class="pd">po danu</div>
+          <ul>
+            <li><i>✓</i> Smeštaj u boksu po izboru</li>
+            <li><i>✓</i> Tri šetnje dnevno</li>
+            <li><i>✓</i> Veterinarski nadzor 24h</li>
+            <li><i>✓</i> Igra na ograđenom terenu</li>
+          </ul>
+          <a href="#kontakt" class="btn btn-w">Rezerviši</a>
+        </div>
+        <div class="pk top rv">
+          <span class="ribbon">⭐ Najbolji izbor</span>
+          <span class="em">🐕‍🦺</span>
+          <h3>Duži boravak</h3>
+          <div class="rng">preko 15 dana</div>
+          <div class="amt">1.200<sup>RSD</sup></div>
+          <div class="pd">po danu — najpovoljnije</div>
+          <ul>
+            <li><i>✓</i> Sve iz ostalih paketa</li>
+            <li><i>✓</i> Kupanje pred odlazak — gratis</li>
+            <li><i>✓</i> Kozmetički tretman — gratis</li>
+            <li><i>✓</i> Prioritet pri rezervaciji</li>
+          </ul>
+          <a href="#kontakt" class="btn btn-c">Rezerviši</a>
+        </div>
+        <div class="pk rv">
+          <span class="em">🦮</span>
+          <h3>Srednji boravak</h3>
+          <div class="rng">5 – 15 dana</div>
+          <div class="amt">1.500<sup>RSD</sup></div>
+          <div class="pd">po danu</div>
+          <ul>
+            <li><i>✓</i> Sve iz kratkog boravka</li>
+            <li><i>✓</i> Prilagođen režim ishrane</li>
+            <li><i>✓</i> Redovan izveštaj vlasniku</li>
+            <li><i>✓</i> Terapija po rasporedu</li>
+          </ul>
+          <a href="#kontakt" class="btn btn-w">Rezerviši</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- UTISCI -->
+<section>
+  <div class="wrap">
+    <div class="sh rv">
+      <span class="kick">Utisci</span>
+      <h2>Šta kažu vlasnici</h2>
+    </div>
+    <div class="tst">
+      <div class="tc rv"><div class="st">★★★★★</div><p>„Ostavili smo Rexa na deset dana. Vratio se veseliji nego što je otišao, a javljali su nam se svaki drugi dan sa slikama."</p><div class="tw"><span class="av">MJ</span><span><b>Milica J.</b><span>Beograd</span></span></div></div>
+      <div class="tc rv"><div class="st">★★★★★</div><p>„Naš je stariji i na terapiji. To što je veterinar stalno tu bilo je presudno — prvi put smo otputovali bez brige."</p><div class="tw"><span class="av">NP</span><span><b>Nenad P.</b><span>Zemun</span></span></div></div>
+      <div class="tc rv"><div class="st">★★★★★</div><p>„Teren je stvarno velik i pas se istrči do kraja. Kad se vrati kući, spava dva dana. Najbolja preporuka."</p><div class="tw"><span class="av">AS</span><span><b>Ana S.</b><span>Novi Beograd</span></span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="wrap">
+    <div class="sh rv">
+      <span class="kick">Česta pitanja</span>
+      <h2>Ono što nas najčešće pitaju</h2>
+    </div>
+    <div class="faq-list">
+      <details class="fq rv" open><summary>Koju dokumentaciju pas mora da ima?</summary><p>Potvrdu o vakcinaciji i osnovni zdravstveni status. Ako pas prima terapiju, ponesite lekove i raspored davanja — mi ga se držimo tačno.</p></details>
+      <details class="fq rv"><summary>Da li mogu da dovedem dva psa iz iste kuće?</summary><p>Naravno. Pozovite nas i dogovorićemo se oko smeštaja i cene — psi iz istog domaćinstva obično ostaju zajedno.</p></details>
+      <details class="fq rv"><summary>Koliko unapred treba rezervisati?</summary><p>U sezoni godišnjih odmora preporučujemo bar nedelju dana unapred. Van sezone mesta obično ima i za sutra.</p></details>
+      <details class="fq rv"><summary>Da li mogu da dođem da pogledam pansion pre boravka?</summary><p>Možete i preporučujemo. Javite se telefonom da se dogovorimo za termin obilaska.</p></details>
+      <details class="fq rv"><summary>Da li je kupanje uključeno u cenu?</summary><p>Za boravak duži od 15 dana kupanje i kozmetički tretman su uključeni. Za kraće boravke se dogovaramo posebno.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta rv">
+  <h2>Spremni da mu rezervišete odmor?</h2>
+  <p>Pozovite nas i za par minuta znaćete da li ima mesta u terminu koji vam treba.</p>
+  <a href="tel:0644114300" class="btn btn-n">📞 064 / 4114-300</a>
+</div>
+
+<!-- KONTAKT -->
+<section id="kontakt">
+  <div class="wrap">
+    <div class="ct-grid">
+      <div class="rv">
+        <span class="kick" style="display:inline-block;background:var(--sky-l);color:#1D7FB4;font-weight:800;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;padding:6px 15px;border-radius:99px;margin-bottom:14px">Kontakt</span>
+        <h2 style="font-size:clamp(1.9rem,3.6vw,2.6rem);margin-bottom:12px">Gde smo i kako do nas</h2>
+        <p style="color:var(--mute)">Pančevački put 94, Krnjača — svega 6 km od centra Beograda. Parking ispred, dolazak bez zakazivanja uz prethodni poziv.</p>
+        <div class="ct-cards">
+          <a href="tel:0644114300"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span><span><b>064 / 4114-300</b><span>Zovite svakog dana</span></span></a>
+          <a href="tel:0643019878"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span><span><b>064 / 301-9878</b><span>Drugi broj</span></span></a>
+          <a href="mailto:office@pansionzapse.rs"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="3"/><path d="M3 7l9 6 9-6"/></svg></span><span><b>office@pansionzapse.rs</b><span>Odgovor u roku od 24h</span></span></a>
+          <a href="https://maps.google.com/?q=Pančevački+put+94+Krnjača+Beograd" target="_blank" rel="noopener"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10.5c0 6-8 11.5-8 11.5s-8-5.5-8-11.5a8 8 0 1 1 16 0z"/><circle cx="12" cy="10.3" r="2.8"/></svg></span><span><b>Pančevački put 94, Krnjača</b><span>Otvori u mapama</span></span></a>
+        </div>
+      </div>
+      <form class="rv" onsubmit="event.preventDefault();const b=this.querySelector('button');b.textContent='Hvala! Javljamo se uskoro 🐾';b.disabled=true;">
+        <h3 style="font-size:1.4rem;margin-bottom:4px">Pošaljite upit</h3>
+        <p style="font-size:.92rem;color:var(--mute);margin-bottom:20px">Popunite formu — javljamo se sa slobodnim terminima.</p>
+        <div class="rw">
+          <div><label>Vaše ime</label><input type="text" placeholder="Ime i prezime" required></div>
+          <div><label>Telefon</label><input type="tel" placeholder="06x xxx xxxx" required></div>
+        </div>
+        <div class="rw">
+          <div><label>Dolazak</label><input type="date"></div>
+          <div><label>Odlazak</label><input type="date"></div>
+        </div>
+        <label>Ime i rasa psa</label>
+        <input type="text" placeholder="npr. Reks, nemački ovčar, 4 godine">
+        <label>Poruka</label>
+        <textarea placeholder="Terapija, navike u ishrani, posebne napomene…"></textarea>
+        <button class="btn btn-c" type="submit" style="width:100%">Pošalji upit</button>
+      </form>
+    </div>
+    <div class="mapb rv"><iframe loading="lazy" title="Mapa" src="https://www.openstreetmap.org/export/embed.html?bbox=20.46%2C44.83%2C20.53%2C44.87&layer=mapnik&marker=44.851%2C20.494"></iframe></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <a href="#" class="logo"><span class="paw"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><circle cx="6.5" cy="8" r="2.4"/><circle cx="11.6" cy="5.6" r="2.5"/><circle cx="17" cy="8.4" r="2.3"/><path d="M12 11.4c2.7 0 5.4 2.6 5.4 5.1 0 2-1.5 3.1-3.2 3.1-1 0-1.5-.4-2.2-.4s-1.2.4-2.2.4c-1.7 0-3.2-1.1-3.2-3.1 0-2.5 2.7-5.1 5.4-5.1z"/></svg></span> Žuža</a>
+        <p style="font-size:.93rem;max-width:32ch">Pansion za pse pod veterinarskim nadzorom, 6 km od centra Beograda.</p>
+      </div>
+      <div><h4>Sajt</h4><ul><li><a href="#o-nama">O nama</a></li><li><a href="#usluge">Usluge</a></li><li><a href="#dan">Dan kod nas</a></li><li><a href="#cenovnik">Cenovnik</a></li></ul></div>
+      <div><h4>Kontakt</h4><ul><li><a href="tel:0644114300">064/4114-300</a></li><li><a href="tel:0643019878">064/301-9878</a></li><li><a href="mailto:office@pansionzapse.rs">office@pansionzapse.rs</a></li></ul></div>
+      <div><h4>Adresa</h4><ul><li>Pančevački put 94</li><li>Krnjača, Beograd</li><li><a href="https://facebook.com/pansionzuza" target="_blank" rel="noopener">Facebook · pansionzuza</a></li></ul></div>
+    </div>
+    <div class="fbot"><span>© 2026 Pansion za pse Žuža</span><span>SR · EN · RU</span></div>
+  </div>
+</footer>
+
+<div class="sticky">
+  <a href="tel:0644114300" class="btn btn-c">📞 Pozovi</a>
+  <a href="#kontakt" class="btn btn-w">Upit</a>
+</div>
+
+<script>
+document.getElementById('burger').onclick=()=>document.getElementById('links').classList.toggle('open');
+document.querySelectorAll('#links a').forEach(a=>a.onclick=()=>document.getElementById('links').classList.remove('open'));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
+document.querySelectorAll('.rv').forEach((el,i)=>{el.style.transitionDelay=(i%3*80)+'ms';io.observe(el)});
+</script>
+</body>
+</html>
